@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mandaar Rao // Security Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<div id="cursor"><div id="cursor-ring"></div><div id="cursor-dot"></div><div id="cursor-cross-h"></div><div id="cursor-cross-v"></div></div>
+<canvas id="bg-canvas"></canvas>
+<canvas id="particle-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-links">
+      <a href="#experience"><span class="num">01_</span>EXPERIENCE</a>
+      <a href="#projects"><span class="num">02_</span>PROJECTS</a>
+      <a href="#skills"><span class="num">03_</span>SKILLS</a>
+      <a href="#contact"><span class="num">04_</span>CONTACT</a>
+      <a href="/resume.pdf" target="_blank" rel="noopener" id="nav-resume" class="nav-cta">RESUME ↗</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#experience" class="mobile-link">01_ EXPERIENCE</a>
+  <a href="#projects" class="mobile-link">02_ PROJECTS</a>
+  <a href="#skills" class="mobile-link">03_ SKILLS</a>
+  <a href="#contact" class="mobile-link">04_ CONTACT</a>
+  <a href="/resume.pdf" target="_blank" rel="noopener" class="mobile-link" style="color:var(--accent)">⬇ RESUME PDF</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- NAME: DOM spans for correct sizing and typewriter+glitch effects -->
+      <div class="hero-name-wrap" id="hero-name">
+        <div class="hero-name" id="name-display"></div>
+      </div>
+      <p class="hero-name-sub fade-reveal" id="hero-sub">CYBER SECURITY ENGINEER · PENETRATION TESTER · SECURITY RESEARCHER</p>
+
+      <!-- SEEKING BADGE -->
+      <div class="seeking-badge fade-reveal" id="hero-seeking">
+        <span class="seeking-dot"></span>
+        SEEKING SUMMER 2026 SECURITY INTERNSHIP
+      </div>
+
+      <!-- TERMINAL -->
+      <div class="terminal fade-reveal" id="hero-terminal">
+        <div class="term-scan"></div>
+        <div class="term-bar">
+          <div class="term-dot r"></div><div class="term-dot y"></div><div class="term-dot g"></div>
+          <span class="term-title">mandaar@uw-sec:~$</span>
+        </div>
+        <div class="term-body" id="term-body"></div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-row fade-reveal" id="hero-stats">
+        <div class="stat"><span class="stat-num" data-val="2" data-suffix="+">0</span><span class="stat-label">Years Industry Exp.</span></div>
+        <div class="stat"><span class="stat-num" data-val="3000" data-suffix="+">0</span><span class="stat-label">Attack Paths Documented</span></div>
+        <div class="stat"><span class="stat-num" data-val="500" data-suffix="+">0</span><span class="stat-label">Engineers Trained</span></div>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="hero-btns fade-reveal" id="hero-btns">
+        <a href="#projects" class="btn-main">VIEW PROJECTS</a>
+        <a href="#contact" class="btn-outline">GET IN TOUCH</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-num">01 //</span>
+      <div><div class="sec-title">EXPERIENCE</div><div class="sec-sub">THREAT ASSESSMENT LOG</div></div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="exp-list" id="exp-list"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-num">02 //</span>
+      <div><div class="sec-title">PROJECTS</div><div class="sec-sub">DEPLOYED TOOLS & RESEARCH</div></div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="proj-filters" id="proj-filters"></div>
+    <div class="proj-grid" id="proj-grid"></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-num">03 //</span>
+      <div><div class="sec-title">SKILLS</div><div class="sec-sub">CAPABILITY MATRIX</div></div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="skill-grid" id="skill-grid"></div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section id="certifications">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-num">03.5 //</span>
+      <div><div class="sec-title">CERTIFICATIONS</div><div class="sec-sub">VALIDATED CREDENTIALS</div></div>
+      <div class="sec-line"></div>
+    </div>
+    <div class="cert-grid" id="cert-grid"></div>
+  </div>
+</section>
+
+<!-- EDU + PUB -->
+<section id="education">
+  <div class="container">
+    <div class="edu-pub-grid">
+      <div>
+        <div class="sec-header">
+          <span class="sec-num">04 //</span>
+          <div><div class="sec-title">EDUCATION</div></div>
+          <div class="sec-line"></div>
+        </div>
+        <div id="edu-list"></div>
+      </div>
+      <div>
+        <div class="sec-header">
+          <span class="sec-num">05 //</span>
+          <div><div class="sec-title">PUBLICATION</div></div>
+          <div class="sec-line"></div>
+        </div>
+        <div id="pub-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-hex"></div>
+  <div class="container contact-inner">
+    <div class="contact-label">ESTABLISH CONNECTION</div>
+    <h2 class="contact-title">Let's build<br/>something<br/>secure.</h2>
+    <div class="contact-links" id="contact-links"></div>
+    <p class="contact-note">M.S. CYBER SECURITY ENGINEERING // UNIVERSITY OF WASHINGTON, BOTHELL</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <span id="foot-name"></span>
+    <div class="foot-online">ALL SYSTEMS NOMINAL</div>
+    <span>VANILLA JS // DATA-DRIVEN // ZERO FRAMEWORK</span>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
